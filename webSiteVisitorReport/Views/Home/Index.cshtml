@@ -1,0 +1,60 @@
+﻿@model  webSiteVisitorReport.Models.VisitorPageModel
+@{
+    ViewData["Title"] = "Visitor Report";
+}
+
+<div class="row">
+    <div class="col-sm-8">
+
+        <div class="container">
+            <br><p><b>Toplam ziyaretçi sayısı:</b> @Model.TotalVisitor</p>
+            <p><b>En çok ziyaretçinin geldiği ülke:</b> @Model.MostVisitedCountry</p><br>
+        </div>
+
+        <div class="container">
+            <h4>Sayfa Görüntülenme Sayıları</h4>
+            <table class="table table-hover table-sm table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Sayfa</th>
+                        <th>Görüntülenme Sayısı</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.TotalPageVisits)
+                    {
+                        <tr>
+                            <td>@item.PageName</td>
+                            <td>@item.VisitCount</td>
+                        </tr>
+                    }
+            
+                </tbody>
+            </table>
+        </div>
+        <div class="container responsive">
+            <hr>
+            <form class="form-check-inline" action="/Home/MakeFilter" data-ajax="true" data-ajax-mode="replace" data-ajax-update="#dateVisitTable" id="form0" method="get">
+                <div class="form-group">
+                    <label for="basTarih">Başlangıç Tarihi:</label>
+                    <input type="date" class="form-control" name="startDate" id="basTarih">
+                </div>
+                <div class="form-group">
+                    <label for="bitTarih">Bitiş Tarihi:</label>
+                    <input type="date" class="form-control" name="endDate" id="bitTarih">
+                </div>
+                <div class="form-group">
+                        <button title="Filtreleme Yap" type="submit" class="btn btn-success" style="margin-top:35%">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                        </svg> Filtrele
+                    </button>
+                </div>
+            </form>
+        </div> <br>
+            <div id="dateVisitTable">
+                @Html.Partial("~/Views/Shared/VisitPageTable.cshtml", Model.DateVisits)
+            </div>
+    </div>
+    <div class="col-sm-4"> </div>
+</div>

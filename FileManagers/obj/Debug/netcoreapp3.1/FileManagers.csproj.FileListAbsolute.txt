@@ -1,0 +1,8 @@
+D:\Users\Kallavy\Desktop\proje\webSiteVisitorReport\FileManagers\bin\Debug\netcoreapp3.1\FileManagers.deps.json
+D:\Users\Kallavy\Desktop\proje\webSiteVisitorReport\FileManagers\bin\Debug\netcoreapp3.1\FileManagers.dll
+D:\Users\Kallavy\Desktop\proje\webSiteVisitorReport\FileManagers\bin\Debug\netcoreapp3.1\FileManagers.pdb
+D:\Users\Kallavy\Desktop\proje\webSiteVisitorReport\FileManagers\obj\Debug\netcoreapp3.1\FileManagers.csprojAssemblyReference.cache
+D:\Users\Kallavy\Desktop\proje\webSiteVisitorReport\FileManagers\obj\Debug\netcoreapp3.1\FileManagers.AssemblyInfoInputs.cache
+D:\Users\Kallavy\Desktop\proje\webSiteVisitorReport\FileManagers\obj\Debug\netcoreapp3.1\FileManagers.AssemblyInfo.cs
+D:\Users\Kallavy\Desktop\proje\webSiteVisitorReport\FileManagers\obj\Debug\netcoreapp3.1\FileManagers.dll
+D:\Users\Kallavy\Desktop\proje\webSiteVisitorReport\FileManagers\obj\Debug\netcoreapp3.1\FileManagers.pdb

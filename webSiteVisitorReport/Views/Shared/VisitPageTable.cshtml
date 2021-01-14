@@ -1,0 +1,23 @@
+﻿@model List<webSiteVisitorReport.Models.DateVisitModel>
+<div class="container responsive">
+    <h4>Günlük Sayfa Görüntülenme Sayıları</h4>
+    <table class="table table-hover table-sm table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Tarih</th>
+                <th>Ziyaretçi Sayısı</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.VisitDate.ToShortDateString()</td>
+                    <td>@item.VisitCount</td>
+                </tr>
+            }
+
+          
+        </tbody>
+    </table>
+</div>
